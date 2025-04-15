@@ -1,0 +1,10 @@
+<h1>User</h1>
+<div class="user">
+    <div *ngFor="let user of users" class="list-user">
+        <img [src]="user.avatar" alt="Avatar of {{ user.first_name }}">
+        <div class="name">
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p>{{ user.email }}</p>
+        </div>
+    </div>
+</div>

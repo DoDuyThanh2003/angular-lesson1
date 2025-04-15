@@ -1,0 +1,9 @@
+<div>
+    <h1>Login</h1>
+    <form (ngSubmit)="login()">
+    <input [(ngModel)]="email" type="text" placeholder="Nhập email !!!" name="email">
+    <input  [(ngModel)]="password"type="text" placeholder="Nhập password" name="password">
+    <button>Đăng nhập</button>
+    </form>
+    <p>{{message}}</p>
+</div>
