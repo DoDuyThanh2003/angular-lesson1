@@ -1,0 +1,13 @@
+<form (ngSubmit)="updateUser()">
+    <label>ID:</label>
+    <input type="number" name="id" [(ngModel)]="selectedUser.id" disabled>
+    <label>Email:</label>
+    <input type="text" name="email" [(ngModel)]="selectedUser.email" required>
+    <label>First Name:</label>
+    <input type="text" name="first_name" [(ngModel)]="selectedUser.first_name" required>
+    <label>Last Name:</label>
+    <input type="text" name="last_name" [(ngModel)]="selectedUser.last_name" required>
+    <label>Avatar:</label>
+    <input type="text" name="avatar" [(ngModel)]="selectedUser.avatar" required>
+    <button type="submit">Update</button>
+</form>
