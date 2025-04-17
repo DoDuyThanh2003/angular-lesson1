@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { DasboadComponent } from './pages/dasboad/dasboad.component';
-import { LayoutComponent } from './pages/layout/layout.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 
 export const routes: Routes = [
     {
@@ -14,13 +15,15 @@ export const routes: Routes = [
         component:LoginComponent
     },
     {
-        path:'',
-        component:LayoutComponent,
-        children: [
-            {
-                path:'dasboad',
-                component: DasboadComponent
-            }
-        ]
+        path:'dasboad',
+        component: DasboadComponent
+    },
+    {
+        path:'app-add-user',
+        component: AddUserComponent
+    },
+    {
+        path:'app-edit-user/:id',
+        component: EditUserComponent
     }
 ];

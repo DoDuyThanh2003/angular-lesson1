@@ -6,5 +6,12 @@
             <h3>{{ user.first_name }} {{ user.last_name }}</h3>
             <p>{{ user.email }}</p>
         </div>
+        <form (ngSubmit)="deleteUser(user.id)">
+            <button>Delete</button>
+        </form>
+        <button (click)="updateUser(user.id)">Edit</button>
     </div>
 </div>
+
+
+<button (click)="addUser()"> ADD user </button>
