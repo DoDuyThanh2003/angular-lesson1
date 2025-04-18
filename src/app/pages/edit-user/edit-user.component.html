@@ -1,13 +1,18 @@
 <form (ngSubmit)="updateUser()">
     <label>ID:</label>
-    <input type="number" name="id" [(ngModel)]="selectedUser.id" disabled>
+    <input type="number" name="id" [(ngModel)]="selectedUser.id" #id="ngModel"  disabled>
+    <div *ngIf="id.invalid && id.touched" class="error-message">ID is required!</div>
     <label>Email:</label>
-    <input type="text" name="email" [(ngModel)]="selectedUser.email" required>
+    <input type="text" name="email" [(ngModel)]="selectedUser.email" #email="ngModel" required>
+    <div *ngIf="email.invalid && email.touched" class="error-message">Email is required!</div>
     <label>First Name:</label>
-    <input type="text" name="first_name" [(ngModel)]="selectedUser.first_name" required>
+    <input type="text" name="first_name" [(ngModel)]="selectedUser.first_name" #first_name="ngModel" required>
+    <div *ngIf="first_name.invalid && first_name.touched" class="error-message">First name is required!</div>
     <label>Last Name:</label>
-    <input type="text" name="last_name" [(ngModel)]="selectedUser.last_name" required>
+    <input type="text" name="last_name" [(ngModel)]="selectedUser.last_name" #last_name="ngModel" required>
+    <div *ngIf="last_name.invalid && last_name.touched" class="error-message">Last Name is required!</div>
     <label>Avatar:</label>
-    <input type="text" name="avatar" [(ngModel)]="selectedUser.avatar" required>
+    <input type="text" name="avatar" [(ngModel)]="selectedUser.avatar" #avatar="ngModel" required>
+    <div *ngIf="avatar.invalid && avatar.touched" class="error-message">ID is required!</div>
     <button type="submit">Update</button>
 </form>

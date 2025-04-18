@@ -1,15 +1,20 @@
 <h2>Add User</h2>
 <form  (ngSubmit)="creatUser()">
      <label>ID:</label>
-     <input type="number" name="id" [(ngModel)]="newUser.id" required >
+     <input type="number" name="id" [(ngModel)]="newUser.id" #id="ngModel" required >
+     <div *ngIf="id.invalid && id.touched" class="error-message">ID is required!</div>
      <label>Email:</label>
-     <input type="text" name="email" [(ngModel)]="newUser.email" required >
+     <input type="text" name="email" [(ngModel)]="newUser.email" #email="ngModel" required >
+     <div *ngIf="email.invalid && email.touched" class="error-message">Email is required!</div>
      <label>First Name:</label>
-     <input type="text" name="first_name" [(ngModel)]="newUser.first_name" required >
+     <input type="text" name="first_name" [(ngModel)]="newUser.first_name" #firtName="ngModel" required >
+     <div *ngIf="firtName.invalid && firtName.touched" class="error-message">First Name is required!</div>
      <label>Last Name:</label>
-     <input type="text" name="last_name" [(ngModel)]="newUser.last_name" required >
+     <input type="text" name="last_name" [(ngModel)]="newUser.last_name" #lastName="ngModel" required >
+     <div *ngIf="lastName.invalid && lastName.touched" class="error-message">Last Name is required!</div>
      <label>Avatar:</label>
-     <input type="text" name="avatar" [(ngModel)]="newUser.avatar" required >
+     <input type="text" name="avatar" [(ngModel)]="newUser.avatar" #avatar="ngModel" required >
+     <div *ngIf="avatar.invalid && avatar.touched" class="error-message">First Name is required!</div>
      <button type="submit">Add</button>
 </form>
 <div class="list-users">

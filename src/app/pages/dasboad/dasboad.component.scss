@@ -1,7 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .user {
     display: flex;
     justify-content: space-between;
 }
 h1 {
     text-align: center;
+}
+.btnAdd {
+    width: 100%;
+    color: rgb(252, 3, 3);
+    font-size: 30px;
+    background-color: rgb(56, 240, 80);
+    padding: 20px 0;
+    margin: 10% 0;
+    border: 0;
+    border-radius: 20px;
 }
